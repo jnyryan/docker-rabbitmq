@@ -1,6 +1,12 @@
 # docker-rabbitmq
-
 a docker container to run rabbitmq.
+
+## Introduction
+Docker is a portable lightweight runtime and packaging tool that allows
+virtualization of applications inlightweight containers.
+
+It allows applications to run in a contained space on the kernelproviding it's
+own directory structure.  
 
 ## Install from DockerHub
 
@@ -18,11 +24,11 @@ sudo docker run -d -p 5672:5672 -p 15672:15672 jnyryan/rabbitmq
 
 ## Run in Vagrant Virtual Machine
 
-1. Install (VagrantUp)[http://www.vagrantup.com/] 
+1. Install (VagrantUp)[http://www.vagrantup.com/]
 2. clone (this repo)[github.com/jnyryan/docker-rabbitmq.git]
 3. run ```vagrant up```
 4. Browse to http://localhost:15672
-    
+
 ### To persist your data locally:
 
 Here we persistently save our data to the host machine's ``/tmp/rabbitmq/mnesia`` directory.
@@ -35,7 +41,7 @@ Since RabbitMQ uses the ``$HOSTNAME`` in its data path, we need to explicitly se
 
     $ sudo docker run -h rabbithost -p 5672:5672 -p 15672:15672 -v /tmp/rabbitmq/mnesia:/var/lib/rabbitmq/mnesia mikaelhg/docker-rabbitmq
     WARNING: Docker detected local DNS server on resolv.conf. Using default external servers: [8.8.8.8 8.8.4.4]
-    
+
                   RabbitMQ 3.1.5. Copyright (C) 2007-2013 GoPivotal, Inc.
       ##  ##      Licensed under the MPL.  See http://www.rabbitmq.com/
       ##  ##
