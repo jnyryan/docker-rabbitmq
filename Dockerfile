@@ -3,11 +3,11 @@
 # VERSION               0.0.1
 
 FROM      ubuntu:14.04
-MAINTAINER Mikael Gueck "gumi@iki.fi"
+MAINTAINER Mikael Gueck "jnyryan@gmail.com"
 
 ENV DEBIAN_FRONTEND noninteractive
 
-ADD rabbitmq-signing-key-public.asc /tmp/rabbitmq-signing-key-public.asc
+ADD etc/rabbitmq-signing-key-public.asc /tmp/rabbitmq-signing-key-public.asc
 RUN apt-key add /tmp/rabbitmq-signing-key-public.asc
 
 RUN echo "deb http://www.rabbitmq.com/debian/ testing main" > /etc/apt/sources.list.d/rabbitmq.list
