@@ -3,7 +3,7 @@
 # VERSION               0.0.1
 
 FROM      ubuntu:14.04
-MAINTAINER Mikael Gueck "jnyryan@gmail.com"
+MAINTAINER John Ryan "jnyryan@gmail.com"
 
 ENV DEBIAN_FRONTEND noninteractive
 
