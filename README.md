@@ -68,7 +68,11 @@ sudo docker build -t jnyryan/rabbitmq /vagrant/.
 sudo docker push jnyryan/rabbitmq
 ```
 
-
+To tag a build
+``` bash
+sudo docker images
+sudo docker tag <IMAGE ID> jnyryan/rabbitmq:TAGTEXT
+```
 ## References
 
 https://github.com/mikaelhg/docker-rabbitmq
